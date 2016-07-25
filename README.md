@@ -6,4 +6,6 @@ To use, have the user input the price of the item. They will then be prompted to
 
 If the amount they entered is more than the cost of the item, appropriate change will be listed out, with the number of units per denomination listed.
 
-Once the denomination is listed, the user is prompted that they can end the program if they enter 0 for the cost and pay amount. If they enter another value, the program runs again. 
+Once the denomination is listed, the user is prompted that they can end the program if they enter 0 for the cost and pay amount. If they enter another value, the program runs again.
+
+Note to users: The code is messy and contains lots of commented out lines, as they show some of the tests I used to verify and debug along the way. This program was written at the end of my first week of Skill Distillery. 

@@ -38,7 +38,7 @@ public class CashRegister {
 				System.out.print("Your change is: ");
 				System.out.println(change(tendered, cost));
 				System.out.println();
-				System.out.println("Enter 0 for price and press enter twice to quit.");
+				System.out.println("Enter 0 for cost and pay amount to quit.");
 
 			}
 		} while (cost != 0);
