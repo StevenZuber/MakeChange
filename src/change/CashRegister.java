@@ -109,7 +109,7 @@ public class CashRegister {
 			// System.out.println("Remaining Change: " + difference);
 		}
 		if ((difference / 10) == 1) {
-			System.out.print(difference / 2000 + " dime, ");
+			System.out.print(difference / 10 + " dime, ");
 			difference = (difference - 10 * (difference / 10));
 		}
 		if ((difference / 10) > 1) {
