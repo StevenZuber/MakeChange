@@ -13,12 +13,17 @@ public class CashRegister {
 
 		System.out.println("\tHello, welcome to Kwik-E-Mart!");
 		System.out.println("\t_______________________________");
-		do {
+		while (true) {
 			System.out.println();
 			System.out.println("Please enter the cost of your item: ");
 			System.out.println();
 			cost = (int) ((keyboard.nextFloat() * 100F));
 			// System.out.println("test cost = " + cost);
+			if ( cost == 0){
+				System.out.println("You have ended the game.");
+				System.out.println("Thank you, come again!");
+				break;
+			}
 			System.out.println("Your total is " + (cost / 100.00F));
 			System.out.println("Please pay for your item.");
 			tendered = (int) ((keyboard.nextFloat() * 100.00F));
@@ -38,12 +43,10 @@ public class CashRegister {
 				System.out.print("Your change is: ");
 				System.out.println(change(tendered, cost));
 				System.out.println();
-				System.out.println("Enter 0 for cost and pay amount to quit.");
+				System.out.println("Enter 0 for cost to quit.");
 
 			}
-		} while (cost != 0);
-
-		keyboard.close();
+		}
 	}
 
 	public static String change(int tendered, int cost) { // where the magic
@@ -84,7 +87,6 @@ public class CashRegister {
 			System.out.print(difference / 500 + " fives, ");
 			difference = (difference - 500 * (difference / 500));
 			// System.out.println("Remaining Change: " + difference);
-
 		}
 		if ((difference / 100) == 1) {
 			System.out.print(difference / 100 + " one, ");
@@ -141,8 +143,6 @@ public class CashRegister {
 			difference = (difference - 1 * (difference / 1));
 			// System.out.println("Remaining Change: " + difference);
 		}
-
 		return change;
 	}
-
 }
